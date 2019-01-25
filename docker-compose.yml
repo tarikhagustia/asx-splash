@@ -22,6 +22,7 @@ services:
             - splash0
             - splash1
             - splash2
+           
         volumes:
             - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
 
@@ -65,10 +66,8 @@ services:
             - tor
         volumes:
             - ./proxy-profiles:/etc/splash/proxy-profiles:ro
-            - ./filters:/etc/splash/filters:ro
+            - ./filters:/etc/splash/filters:ro  
 
-
-    
     tor:
         image: jess/tor-proxy
         expose:
